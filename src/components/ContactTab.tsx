@@ -19,7 +19,7 @@ export const ContactTab: React.FC = () => {
 
   const handleCopyEmail = () => {
     sound.playTabClick();
-    navigator.clipboard.writeText('sabiha@portfolder.studio');
+    navigator.clipboard.writeText('sabihaimrojmim@gmail.com');
     setCopied(true);
     setTimeout(() => setCopied(false), 2400);
   };
@@ -78,10 +78,10 @@ export const ContactTab: React.FC = () => {
             <div className="flex flex-col sm:flex-row border-t border-neutral-400 py-3 sm:items-center">
               <div className="w-full sm:w-32 text-neutral-500 font-semibold mb-2 sm:mb-0">SOCIALS</div>
               <div className="flex-1 flex items-center gap-6 sm:gap-8 text-neutral-900">
-                <a href="#ig" className="hover:text-neutral-500 transition-colors">IG &rarr;</a>
-                <a href="#x" className="hover:text-neutral-500 transition-colors">X &rarr;</a>
-                <a href="#in" className="hover:text-neutral-500 transition-colors">IN &rarr;</a>
-                <a href="#be" className="hover:text-neutral-500 transition-colors">BE &rarr;</a>
+                <a href="https://www.facebook.com/SabihaImrojMim" target="_blank" rel="noreferrer" className="hover:text-neutral-500 transition-colors">FB &rarr;</a>
+                <a href="https://github.com/sabihaimroj" target="_blank" rel="noreferrer" className="hover:text-neutral-500 transition-colors">GH &rarr;</a>
+                <a href="https://www.linkedin.com/in/sabiha-imroj-mim-5b638b438/" target="_blank" rel="noreferrer" className="hover:text-neutral-500 transition-colors">IN &rarr;</a>
+                <a href="https://www.instagram.com/sabiha_imroj" target="_blank" rel="noreferrer" className="hover:text-neutral-500 transition-colors">IG &rarr;</a>
               </div>
             </div>
 
@@ -89,7 +89,7 @@ export const ContactTab: React.FC = () => {
             <div className="flex flex-col sm:flex-row border-t border-neutral-400 py-3 sm:items-center group">
               <div className="w-full sm:w-32 text-neutral-500 font-semibold mb-2 sm:mb-0">EMAIL</div>
               <div className="flex-1 flex items-center justify-between text-neutral-900">
-                <a href="mailto:hello@sabiha.com" className="hover:text-neutral-500 transition-colors">HELLO@SABIHA.COM &rarr;</a>
+                <a href="mailto:sabihaimrojmim@gmail.com" className="hover:text-neutral-500 transition-colors">SABIHAIMROJMIM@GMAIL.COM &rarr;</a>
                 <button
                   type="button"
                   onClick={handleCopyEmail}
@@ -98,6 +98,19 @@ export const ContactTab: React.FC = () => {
                   {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   <span>{copied ? 'COPIED' : 'COPY'}</span>
                 </button>
+              </div>
+            </div>
+
+            {/* CV Row */}
+            <div className="flex flex-col sm:flex-row border-t border-neutral-400 py-3 sm:items-start group">
+              <div className="w-full sm:w-32 text-neutral-500 font-semibold mb-2 sm:mb-0">CV</div>
+              <div className="flex-1 flex flex-col sm:flex-row items-start justify-between text-neutral-900">
+                <a href="https://drive.google.com/file/d/1TXUn_cILFqY3I93f3na5eykDJ3cQFUV-/view?usp=sharing" target="_blank" rel="noreferrer" className="hover:text-neutral-500 transition-colors flex items-center gap-1">
+                  VIEW CV (DRIVE) <ArrowUpRight className="w-4 h-4" />
+                </a>
+                <div className="mt-4 sm:mt-0 bg-white p-1 border border-neutral-300 rounded shadow-sm">
+                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://drive.google.com/file/d/1TXUn_cILFqY3I93f3na5eykDJ3cQFUV-/view?usp=sharing" alt="CV QR Code" className="w-20 h-20" />
+                </div>
               </div>
             </div>
 

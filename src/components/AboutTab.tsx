@@ -5,6 +5,7 @@ import { PostageStamp } from './PostageStamp';
 import { MadridClock } from './MadridClock';
 import { WatermarkScript } from './WatermarkScript';
 import { sound } from '../utils/audio';
+import sabihaPortrait from '../assets/images/sabiha_portrait.png';
 
 interface AboutTabProps {
   onNavigateContact: () => void;
@@ -62,7 +63,7 @@ export const AboutTab: React.FC<AboutTabProps> = ({
       {/* Center Postage Stamp Hero */}
       <div className="relative z-10 my-4 sm:my-6 flex justify-center items-center">
         <PostageStamp
-          imageSrc="/src/assets/images/sabiha_portrait.png"
+          imageSrc={sabihaPortrait}
           alt="Sabiha portrait stamp"
           onClick={() => {
             sound.playStamp();
